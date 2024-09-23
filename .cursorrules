@@ -1,0 +1,14 @@
+- We are using Next.js 14 with App Router
+    - no need to import React
+- We are using Stripe for payment processing
+- We are using Prisma as our database ORM
+- Tailwind CSS for styling
+- Shadcn for UI components
+
+
+# Main principles
+- Always create solution that are reusable
+- Always create solution that are scalable
+- Always create solution that are maintainable
+- Always create solution that are testable
+- Always create solution that are efficient
