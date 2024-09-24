@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "email": "cscript //NoLogo run-as-admin.vbs",
+    "email-script": "echo Starting email script... && if exist .react-email-temp (echo Removing .react-email-temp && rmdir /s /q .react-email-temp) else (echo .react-email-temp does not exist) && if exist .react-email (echo Removing .react-email && rmdir /s /q .react-email) else (echo .react-email does not exist) && echo Copying .env file && copy .env .\\node_modules\\react-email && echo Starting email dev server && email dev --dir src/email --port 3001"
   },
   "dependencies": {
     "@prisma/client": "^5.19.1",
@@ -14,6 +16,7 @@
     "@radix-ui/react-icons": "^1.3.0",
     "@radix-ui/react-label": "^2.1.0",
     "@radix-ui/react-slot": "^1.1.0",
+    "@react-email/components": "^0.0.25",
     "@stripe/react-stripe-js": "^2.8.0",
     "@stripe/stripe-js": "^4.5.0",
     "class-variance-authority": "^0.7.0",
@@ -22,6 +25,8 @@
     "next": "14.2.13",
     "react": "^18",
     "react-dom": "^18",
+    "react-email": "^1.10.1",
+    "resend": "^4.0.0",
     "stripe": "^16.12.0",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",
